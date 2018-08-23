@@ -10,7 +10,7 @@ echo
 
 echo "Pinging Google"
 
-if ( ping -c 1 google.com > /dev/null )
+if ( ping -c 1 -W 3 google.com > /dev/null )
 then
 	echo
 	echo "You are Online"
@@ -22,7 +22,7 @@ else
 	echo "Couldn't connect to Google"
 	echo "Pinging Reddit..."
 	
-	if( ping reddit.com > /dev/null)
+	if( ping -c 1 -W 3 reddit.com > /dev/null)
 	then
 		echo
 		echo -e "${GREEN}You are Online${NC}"
