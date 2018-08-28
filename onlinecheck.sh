@@ -13,7 +13,7 @@ echo "Pinging Google"
 if ( ping -c 1 -W 3 google.com > /dev/null )
 then
 	echo
-	echo "You are Online"
+	echo -e "${GREEN}You are Online${NC}"
 else
 	
 	err=2
